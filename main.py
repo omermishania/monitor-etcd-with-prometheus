@@ -12,8 +12,9 @@ query_dict = {
 }
 
 #vars
+k8s_token = <K8S-TOKEN>
 url = f'https://prometheus-k8s-openshift-monitoring.apps.ocp49-test.cloudlet-dev.com/api/v1/query?query=' # prometheus url
-head = {"Authorization": "Bearer sha256~wouvtIMogxp1asaZV63SJ3J6BeN6zLnTRHlISG4LBgk"} # request headers
+head = {f"Authorization": "Bearer {k8s_token}"} # request headers
 
 
 # returns the needed query metrics from Prometheus
